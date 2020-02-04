@@ -1,0 +1,21 @@
+10:
+  a: 0.016
+  b: 0.024
+  c: 0.021
+
+100:
+  a: 0.030
+  b: 0.020
+  c: 0.030
+
+1000:
+  a: 0.330
+  b: 0.336
+  c: 0.343
+
+5000:
+  a: 14.159
+  b: 14.508
+  c: 14.405
+
+recorded using the time command on linux. real time recorded here. 
