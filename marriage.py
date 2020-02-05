@@ -38,12 +38,12 @@ def GetMatches(mPrefs, fPrefs):
         # Maintanence: every lady is matched with the most desirable knight that has proposed to her thus far
         # Termination: all knights and ladies are paired with their most stable match 
     while "" in mMatches.values():
-	 # Loop invariant: if the nights list is shorter than  n-2 where n = the number of ladies, then that knight was rejected by his preferred lady
-	    # Initialization: all knights propose have not proposed yet and thus have no been rejected
-	    # Maintainance: as knights are rejected they will propose to another lady, thus making their list shorter
-	    # Termination: also true ^
-	 for k, v in mPrefs.items():
-            
+        # Loop invariant: if the nights list is shorter than  n-2 where n = the number of ladies, then that knight was rejected by his preferred lady
+            # Initialization: all knights propose have not proposed yet and thus have no been rejected
+            # Maintainance: as knights are rejected they will propose to another lady, thus making their list shorter
+            # Termination: also true ^
+        for k, v in mPrefs.items():
+    
             # if a knight doesn't have a match
             if mMatches[k] == "":
                 prop = v.pop(0)
