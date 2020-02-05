@@ -32,12 +32,15 @@ def GetMatches(mPrefs, fPrefs):
     mMatches = {key: "" for key in mPrefs}
     wMatches = {key: "" for key in fPrefs}
     
-    # while unengaged knights exist
+    # while there exists a knight without a match
     # Loop invariant:
-        # Initialization: 
+        # Initialization: at least one knight does not have a match
+        # Maintanence: every lady is matched with the most desirable knight that has proposed to her thus far
+        # Termination: all knights and ladies are paired with their most stable match 
     while "" in mMatches.values():
         for k, v in mPrefs.items():
             
+            # if a knight doesn't have a match
             if mMatches[k] == "":
                 prop = v.pop(0)
                 if wMatches[prop] == "":
