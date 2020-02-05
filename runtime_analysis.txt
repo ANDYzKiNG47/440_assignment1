@@ -1,0 +1,7 @@
+The gale-shapley algorithm is an n^2 if implemented in the most efficent way.
+Dispite our best efforts, the algorithm runs with a complexity of n^3.
+We recored our time with the linux time command. The average runtime of 
+our program with an input of 10 was .020 seconds. With an input of 100
+the average runtime was .026 seconds. With an input size of 1000 the
+average runtime was .336 seconds, and 14.357 seconds with an input size
+of 500.

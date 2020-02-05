@@ -4,7 +4,7 @@ def ReadInput():
     fname = ""
     mPrefs = {}
     fPrefs = {}
-    if len(sys.argv) > 2:
+    if len(sys.argv) != 2:
         exit(1)
     else:
         fname = sys.argv[1]
