@@ -24,12 +24,17 @@ def ReadInput():
 
     return mPrefs, fPrefs
 
-
+# invariant 1: if a lady has rejected a knight,
+# then that lady has been proposed to by a more suitable match.
+# 
+# invariant 2: a knight will never propose to the same lady twice
 def GetMatches(mPrefs, fPrefs):
     mMatches = {key: "" for key in mPrefs}
     wMatches = {key: "" for key in fPrefs}
     
     # while unengaged knights exist
+    # Loop invariant:
+        # Initialization: 
     while "" in mMatches.values():
         for k, v in mPrefs.items():
             
@@ -42,13 +47,13 @@ def GetMatches(mPrefs, fPrefs):
                 else:
                     oldMatch = wMatches[prop]
                     for val in fPrefs[prop]:
-                        #if proposer is more desirable than current match
+                        # if proposer is more desirable than current match
                         if val == k:
                             mMatches[k] = prop
                             wMatches[prop] = k
                             mMatches[oldMatch] = ""
                             break
-
+                        # if old match is more desirable
                         elif val == oldMatch:
                             break
 
