@@ -21,9 +21,9 @@
 
 [o][o][x][o][o]
 [o][o][x][o][o]
-[x][o][x][o][o]
-[x][o][x][o][o]
-[x][o][x][o][o]
+[o][o][x][o][o]
+[o][o][x][o][o]
+[o][o][x][o][o]
 
 4)
   a. n^2 * ((n-1)/n) students
